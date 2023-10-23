@@ -1,0 +1,19 @@
+{
+  "name": "ark-tasks",
+  "version": "1.0.0",
+  "description": "This is a program meant to generate tasks that can be completed in Ark: Survival Ascended and reward the user with tokens.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djmendes4/Ark-Tasks.git"
+  },
+  "author": "Dillon J. Mendes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djmendes4/Ark-Tasks/issues"
+  },
+  "homepage": "https://github.com/djmendes4/Ark-Tasks#readme"
+}
