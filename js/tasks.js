@@ -204,7 +204,7 @@ const categories = [
 
 const activeTasks = [];
 
-const fs = require('fs');
+import fs from 'fs';
 const data = "This is the new content of the file.";
 
 fs.writeFile('file.txt', data, (err) => {
