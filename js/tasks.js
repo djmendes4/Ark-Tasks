@@ -203,3 +203,13 @@ const categories = [
 ];
 
 const activeTasks = [];
+
+const fs = require('fs');
+const data = "This is the new content of the file.";
+
+fs.writeFile('file.txt', data, (err) => {
+  if (err) {
+    throw err;
+  }
+  console.log('The file has been saved!');
+});
