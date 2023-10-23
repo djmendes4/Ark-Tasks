@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introduction</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/tasks.css">
+	</head>
+	<body>
+		<section id="tasksContainer">
+			<section id="taskSlot1" class="taskSlot">
+				<div class="input">
+					<div class="container">
+						<div class="reroll button" hidden>
+							<div class="reroll"></div>
+							<div class="base"></div>
+							<div class="hover"></div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="task button">
+							<div class="assign"></div>
+							<div class="base"></div>
+							<div class="hover"></div>
+						</div>
+					</div>
+					<div class="container"></div>
+				</div>
+				<div class="output">
+					<div class="taskName"></div>
+					<div class="taskDescription"></div>
+					<div class="ROW_WRAPPER">
+						<div class="amount"></div>
+						<div class="numberOfTokens"></div>
+					</div>
+				</div>
+			</section>
+			<section id="taskSlot2" class="taskSlot">
+				<div class="input">
+					<div class="container">
+						<div class="reroll button" hidden>
+							<div class="reroll"></div>
+							<div class="base"></div>
+							<div class="hover"></div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="task button">
+							<div class="assign"></div>
+							<div class="base"></div>
+							<div class="hover"></div>
+						</div>
+					</div>
+					<div class="container"></div>
+				</div>
+				<div class="output">
+					<div class="taskName"></div>
+					<div class="taskDescription"></div>
+					<div class="ROW_WRAPPER">
+						<div class="amount"></div>
+						<div class="numberOfTokens"></div>
+					</div>
+				</div>
+			</section>
+			<section id="taskSlot3" class="taskSlot">
+				<div class="input">
+					<div class="container">
+						<div class="reroll button" hidden>
+							<div class="reroll"></div>
+							<div class="base"></div>
+							<div class="hover"></div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="task button">
+							<div class="assign"></div>
+							<div class="base"></div>
+							<div class="hover"></div>
+						</div>
+					</div>
+					<div class="container"></div>
+				</div>
+				<div class="output">
+					<div class="taskName"></div>
+					<div class="taskDescription"></div>
+					<div class="ROW_WRAPPER">
+						<div class="amount"></div>
+						<div class="numberOfTokens"></div>
+					</div>
+				</div>
+			</section>
+		</section>
+		<section id="addNewTask_container">
+			<form name="addNewTask">
+				<section>
+					<div id="task_name" class="task data">
+						<label for="TASK_NAME">Task Name:</label>
+						<input name="TASK_NAME" type="text" maxlength="64" placeholder="Collect Metal Ore" size="48" spellcheck="true" required>
+					</div>
+					<div id="task_description" class="task data">
+						<label for="TASK_DESCRIPTION">Task Description:</label>
+						<textarea name="TASK_DESCRIPTION" rows="3" cols="48" placeholder="Collect Metal Ore using any method."></textarea>
+					</div>
+					<div id="category_name" class="task data">
+						<label for="CATEGORY_NAME">Category Name:</label>
+						<select name="CATEGORY_NAME" required>
+							<option value="" label="Collecting" hidden disabled selected></option>
+							<option value="collecting" label="Collecting"></option>
+							<option value="crafting" label="Crafting"></option>
+							<option value="taming" label="Taming"></option>
+							<option value="breeding" label="Breeding"></option>
+							<option value="building" label="Building"></option>
+							<option value="hunting" label="Hunting"></option>
+							<option value="exploring" label="Exploring"></option>
+						</select>
+					</div>
+				</section>
+
+				<section>
+					<div id="relative_weight" class="task data">
+						<label for="RELATIVE_WEIGHT">Relative Weight:</label>
+						<input name="RELATIVE_WEIGHT" type="number" placeholder="100" min="0" max="100" step="1">
+					</div>
+					<div id="minimum_value" class="task data">
+						<label for="MINIMUM_VALUE">Minimum:</label>
+						<input name="MINIMUM_VALUE" type="number" placeholder="300" min="1" max="10000" step="1">
+					</div>
+					<div id="maximum_value" class="task data">
+						<label for="MAXIMUM_VALUE">Maximum:</label>
+						<input name="MAXIMUM_VALUE" type="number" placeholder="1200" min="1" max="10000" step="1">
+					</div>
+					<div id="increment_value" class="task data">
+						<label for="INCREMENT_VALUE">Increment:</label>
+						<input name="INCREMENT_VALUE" type="number" placeholder="100" min="1" max="10000" step="1">
+					</div>
+					<div id="number_of_tokens" class="task data">
+						<label for="NUMBER_OF_TOKENS">Number of Tokens:</label>
+						<input name="NUMBER_OF_TOKENS" type="number" placeholder="1" min="0" max="100" step="1">
+					</div>
+				</section>
+
+				<section>
+					<div id="is_required" class="task data">
+						<label for="IS_REQUIRED"><input name="IS_REQUIRED" type="checkbox" value="is_required">Is Required</label>
+					</div>
+					<div id="is_mutable" class="task data">
+						<label for="IS_MUTABLE"><input name="IS_MUTABLE" type="checkbox" value="is_required">Is Mutable</label>
+					</div>
+					<div id="is_timed" class="task data">
+						<label for="IS_TIMED"><input name="IS_TIMED" type="checkbox" value="is_required">Is Timed</label>
+					</div>
+					<div id="is_prioritized" class="task data">
+						<label for="IS_PRIORITIZED"><input name="IS_PRIORITIZED" type="checkbox" value="is_required">Is Prioritized</label>
+					</div>
+					<div id="is_repeatable" class="task data">
+						<label for="IS_REPEATABLE"><input name="IS_REPEATABLE" type="checkbox" value="is_required" checked>Is Repeatable</label>
+					</div>
+					<div id="is_unique" class="task data">
+						<label for="IS_UNIQUE"><input name="IS_UNIQUE" type="checkbox" value="is_required">Is Unique</label>
+					</div>
+				</section>
+
+				<section id="submitAddNewTask">
+					<button type="submit" form="addNewTask" onclick="copyData()" value="Submit">Add New Task</button> 
+				</section>
+			</form>
+		</section>
+
+		<script type="text/javascript" src="js/taskData.js"></script>
+
+		<script type="text/javascript" src="js/general.js"></script>
+		<script type="text/javascript" src="js/tasks.js"></script>
+		<script type="text/javascript" src="js/buttons.js"></script>
+		<script type="text/javascript" src="js/triggers.js"></script>
+
+		<script type="text/javascript" src="js/cns.js"></script>
+	</body>
+</html>

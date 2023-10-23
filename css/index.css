@@ -1,0 +1,251 @@
+:root {
+	--colorTone0: #737977;
+	--colorTone1: #616664;
+	--colorTone2: #4F5452;
+	--colorTone3: #3C403E;
+	--colorTone4: #262928;
+	--taskSlotHeight: 192px;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+
+	display: flex;
+	flex-direction: column;
+
+	background-color: rgb(33, 33, 33);
+	background-image: url(../assets/bg_top.png), url(../assets/bg_repeat.png);
+	background-repeat: repeat-x, repeat;
+	background-position: center top, center 600px;
+}
+
+textarea {
+	resize: none;
+}
+
+#tasksContainer {
+	position: relative;
+	width: 58%;
+	margin: 0 auto;
+	margin-top: 80px;
+
+	padding: 16px;
+	border: 2px solid black;
+	border-radius: 16px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+
+	background-color: var(--colorTone2);
+}
+
+#addNewTask_container {
+	position: relative;
+	width: 58%;
+	margin: 0 auto;
+	margin-top: 8px;
+	
+	padding: 16px;
+	border: 2px solid black;
+	border-radius: 16px;
+
+	display: flex;
+	flex-direction: row;
+
+	background-color: var(--colorTone2);
+}
+
+#addNewTask_container > form {
+	width: 100%;
+
+	display: flex;
+	flex-direction: inherit;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#addNewTask_container > form > section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#submitAddNewTask {
+	padding-top: 16px;
+
+	align-items: center;
+	flex-basis: 100%;
+}
+
+#submitAddNewTask > button {
+	width: 40%;
+}
+
+button {
+	border-radius: 8px;
+}
+
+.taskSlot {
+	width: 100%;
+	height: var(--taskSlotHeight);
+
+	box-shadow: inset 0px 0px 16px -1px black;
+
+	margin-bottom: 16px;
+	border-radius: 16px;
+
+	display: flex;
+	flex-direction: row;
+
+	background-color: var(--colorTone1);
+}
+
+.taskSlot > .input {
+	width: var(--taskSlotHeight);
+	height: var(--taskSlotHeight);
+
+	display: flex;
+	flex-shrink: 0;
+
+	background-color: var(--colorTone4);
+	box-shadow: inset 0px 0px 8px 0px black;
+	border-radius: 16px;
+}
+
+.taskSlot > .input > .container {
+	width: calc(var(--taskSlotHeight) / 3);
+	height: inherit;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.taskSlot > .input > .container > .task.button {
+	width: inherit;
+	height: calc(var(--taskSlotHeight) / 3);
+
+	display: flex;
+}
+
+.taskSlot > .input > .container > .reroll.button {
+	width: 32px;
+	height: 32px;
+}
+
+.taskSlot:last-child {
+	margin-bottom: 0px;
+}
+
+section.taskSlot > div.output {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: normal;
+	align-items: normal;
+	align-content: normal;
+	flex: 0 1 100%;
+
+	font-family: 'Courier New', Courier, monospace;
+}
+
+div.output > div.ROW_WRAPPER {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex: 1 0 auto;
+}
+
+div.output > div.taskName,
+div.output > div.taskDescription,
+div.output > div.probability {
+	display: flex;
+	flex: 0 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+
+div.taskName {
+	height: 32px;
+	padding-top: 16px;
+
+	font-size: 24px;
+	font-weight: bold;
+}
+
+div.taskName > div:last-child {
+	margin-left: 8px;
+	font-size: 16px;
+}
+
+div.taskDescription {
+	text-align: center;
+	padding: 0px 24px;
+}
+
+div.output div.amount,
+div.output div.numberOfTokens {
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 50%;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 36px;
+	font-weight: bold;
+}
+
+div.amount > div:first-child,
+div.numberOfTokens > div:first-child {
+	font-size: 18px;
+}
+
+div.task.button > div.assign,
+div.task.button > div.unchecked,
+div.task.button > div.checked 			{ width: inherit; height: inherit; position: absolute; }
+
+div.hover {
+	width: inherit;
+	height: inherit;
+
+	position: absolute;
+
+	opacity: 0;
+	z-index: 10000;
+
+	transition: opacity 0.5s;
+}
+
+div.hover:hover {
+	opacity: 1;
+
+	transition: opacity 0.2s;
+}
+
+div.button > div 					{ width: inherit; height: inherit; position: absolute; }
+
+div.button > div.base				{ background: center/contain url("../assets/unchecked_box_icon.png") no-repeat; }
+div.button > div.hover 				{ background: center/contain url("../assets/empty_unchecked_hover_icon.png") no-repeat; }
+
+div.button > div.reroll 			{ background: center/contain url("../assets/reroll_icon.png") no-repeat; }
+div.button > div.assign 			{ background: center/contain url("../assets/add_new_task_icon.png") no-repeat; }
+div.button > div.unchecked			{ background: center/contain url("../assets/unchecked_box_icon.png") no-repeat; }
+div.button > div.checked			{ background: center/contain url("../assets/checked_box_icon.png") no-repeat; }
+
+div.button > div.reroll,
+div.button > div.assign,
+div.button > div.unchecked,
+div.button > div.checked 			{ opacity: 1; transition: opacity 0.4s; z-index: 100; }
+
+div.button > div.assign.fadeIn,
+div.button > div.unchecked.fadeIn,
+div.button > div.checked.fadeIn		{ opacity: 0; transition: opacity 0.4s; }
+
+div.button > div.assign.fadeOut,
+div.button > div.unchecked.fadeOut,
+div.button > div.checked.fadeOut	{ opacity: 0; transition: opacity 0.4s; }
